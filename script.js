@@ -3,8 +3,8 @@ const imgAprovado = '<img src="./images/aprovado.png" alt="Emoji Celebrando" />'
 const imgReprovado = '<img src="./images/reprovado.png" alt="Emoji Decepcionado" />';
 const atividades = [];
 const notas = [];
-const spanAprovado = '<span class="resultado-aprovado">Aprovado</span>';
-const spanReprovado = '<span class="resultado-reprovado">Reprovado</span>';
+const spanAprovado = '<span class="resultado-aprovado aprovado">Aprovado</span>';
+const spanReprovado = '<span class="resultado-reprovado reprovado">Reprovado</span>';
 const notaMinima = parseFloat(prompt('Digite a Nota Mínima: '));
 
 let linhas = '';
@@ -29,7 +29,7 @@ function adicionaLinha() {
     notas.push(parseFloat(inputNotaAtividade.value));
 
 
-    let linha = '<tr>'
+    let linha = '<tr>';
     linha += `<td>${inputNomeAtividade.value}</td>`;
     linha += `<td>${inputNotaAtividade.value}</td>`;
     linha += `<td>${inputNotaAtividade.value >= notaMinima ? imgAprovado : imgReprovado}</td>`;
